@@ -11,8 +11,8 @@ import com.google.firebase.cloud.FirestoreClient;
 
 public class Database {
 
-	private static final String privateKeyLocation = "/Users/admiraal.f/Java/HSL_iipsen/firebase_observable/assets/iipsen-98d8d-firebase-adminsdk-r5w1q-535f334738.json";
-	private static final String databaseUrl = "https://iipsen-98d8d.firebaseio.com";
+	private static final String privateKeyLocation = "private_key_location";
+	private static final String databaseUrl = "database_url";
 	private Firestore db;
 	
 	
@@ -25,7 +25,7 @@ public class Database {
 	        
 			FirebaseOptions options = new FirebaseOptions.Builder()
 			  .setCredentials(GoogleCredentials.fromStream(serviceAccount))
-			  .setDatabaseUrl("https://iipsen-98d8d.firebaseio.com")
+			  .setDatabaseUrl(databaseUrl)
 			  .build();
 		
 			FirebaseApp.initializeApp(options);

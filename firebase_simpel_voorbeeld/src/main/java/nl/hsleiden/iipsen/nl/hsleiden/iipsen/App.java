@@ -25,14 +25,14 @@ public class App
     public static void main( String[] args ) throws IOException, InterruptedException, ExecutionException
     {
     	
-    	final String PRIVATEKEY = "/Users/admiraal.f/Java/HSL_iipsen/firebase_simpel_voorbeeld/src/main/java/assets/iipsen-98d8d-firebase-adminsdk-r5w1q-535f334738.json";
+    	final String PRIVATEKEY = "private_key.json";
     	
         FileInputStream serviceAccount =
 				new FileInputStream(PRIVATEKEY);
 
 		FirebaseOptions options = new FirebaseOptions.Builder()
 		  .setCredentials(GoogleCredentials.fromStream(serviceAccount))
-		  .setDatabaseUrl("https://iipsen-98d8d.firebaseio.com")
+		  .setDatabaseUrl("database_url")
 		  .build();
 	
 		FirebaseApp.initializeApp(options);
