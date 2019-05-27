@@ -23,8 +23,9 @@ public class App
 	public App() {
 		
 		// Hier maken we een game identifier en een game-token aan. 
-		String gameIdentifier = "GY2UYU4D";
+		String gameIdentifier = "GY2UYU4E";
 		String gameToken = "HGJTF";
+		
 		
 		// We maken hier een hashmap met de gegevens van de spelers.
 		Map playerData = new HashMap<String, String>();
@@ -49,7 +50,7 @@ public class App
 		
 		// Maken van de MVC
 		Model gameModel = new GameModel();
-		Controller gameController = new GameController(gameModel);	// De EventListener kan hier..(denk ik)
+		Controller gameController = new GameController(gameModel);	// De EventListener kan hier..
 		View gameView = new GameView(gameController);
 		
 		
@@ -57,6 +58,8 @@ public class App
 		
 		// Luisteren naar de Listener. Verplaats dit naar een controller.
 		fbService.listen(gameIdentifier, gameController);
+		
+		
 		
 		
 		try {

@@ -7,7 +7,7 @@ import nl.game.views.View;
 
 public interface Controller {
 	
-	public void setView(View v);
+
 	public void update(DocumentSnapshot ds);
-	public void registerObserver(Observer v);
+	public void registerObserver(View v);
 }

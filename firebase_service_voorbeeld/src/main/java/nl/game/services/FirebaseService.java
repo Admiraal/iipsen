@@ -54,6 +54,7 @@ public class FirebaseService implements DataService{
 		    if (snapshot != null && snapshot.exists()) {
 		    	
 		    	controller.update(snapshot);
+		    	
 		    	System.out.println("Current data: " + snapshot.getData());
 		    } else {
 		      System.out.print("Current data: null");

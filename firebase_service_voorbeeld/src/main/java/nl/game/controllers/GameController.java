@@ -10,29 +10,24 @@ import nl.game.views.View;
 public class GameController implements Controller{
 
 	private Model gameModel;
-	private View gameView;
+	
 	
 	
 	public GameController(Model gameModel) {
 		this.gameModel = gameModel;
-				
-	}
-	
-	
-	public void setView(View view) {
-		this.gameView = view;
+		//				
 	}
 	
 	
 	public void update(DocumentSnapshot ds) {
 		
-		// Deze update wordt getriggerd na het 
+		// Deze update wordt getriggerd na het wijzigen van de db.
 		System.out.println("");
 		System.out.println("update gekregen");
 	}
 	
-	public void registerObserver(Observer v) {
-		gameModel.registerObserver(gameView);
+	public void registerObserver(View v) {
+		gameModel.registerObserver(v);
 	}
 	
 }
