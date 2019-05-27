@@ -8,7 +8,7 @@ import nl.game.shared.Observer;
 
 public class GameView implements Observer, View{
 
-	private Model gameModel;
+	
 	private Controller gameController;
 	
 	public GameView(Controller controller) {

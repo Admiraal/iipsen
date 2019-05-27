@@ -16,8 +16,7 @@ public class GameController implements Controller{
 	public GameController(Model gameModel) {
 		this.gameModel = gameModel;
 		//				
-	}
-	
+	}	
 	
 	public void update(DocumentSnapshot ds) {
 		
